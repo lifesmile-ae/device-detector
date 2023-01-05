@@ -2,14 +2,16 @@
   "name": "devicedetect",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "lifesmile-ae",
   "license": "ISC",
-  "type": "module",
   "dependencies": {
     "express": "^4.18.2",
     "useragent": "^2.3.0"

@@ -1,7 +1,8 @@
-import express from "express";
-import useragent from "useragent";
+const express = require("express");
+const useragent = require("useragent");
 
 const app = express();
+app.use(express.json());
 
 app.get("/", (req, res) => {
   const userAgent = useragent.parse(req.headers["user-agent"]);
@@ -11,6 +12,7 @@ app.get("/", (req, res) => {
   });
 });
 
-app.listen(3001, () => {
-  console.log("Server listening on port 3001");
+const port = process.env.PORT || 3001;
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
 });
