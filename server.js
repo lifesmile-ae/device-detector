@@ -6,7 +6,6 @@ app.use(express.json());
 
 app.get("/", (req, res) => {
   const userAgent = useragent.parse(req.headers["user-agent"]);
-  console.log(userAgent);
   res.json({
     userAgent,
   });
